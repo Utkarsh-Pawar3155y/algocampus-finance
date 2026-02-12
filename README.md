@@ -3,6 +3,7 @@
 Decentralized Campus Finance Platform built on Algorand Blockchain.
 
 App Link - https://algocampus-finance.vercel.app/
+Demo Video - https://youtu.be/UvSNGIiq4s4
 
 ## 🚀 Features
 
