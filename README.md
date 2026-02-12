@@ -1,20 +1,80 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# AlgoCampus Finance
 
-# Run and deploy your AI Studio app
+Decentralized Campus Finance Platform built on Algorand Blockchain.
 
-This contains everything you need to run your app locally.
+## 🚀 Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1GEMSrgZgyhwzEVmBlSxLNDeJlyPbRyCl
+### 💰 Lending Protocol
+- Borrow ALGO with fixed interest
+- On-chain debt tracking
+- Smart contract enforced repayment
+- Liquidity pool management
 
-## Run Locally
+### 🎟 Campus Passes
+- Bronze & Silver NFT-style passes
+- Minting & opt-in functionality
 
-**Prerequisites:**  Node.js
+### 📢 Crowdfunding
+- Donate to student campaigns
+- Transparent on-chain transactions
 
+## 🏗 Tech Stack
+- React + Vite
+- TypeScript
+- Algorand Smart Contracts (TEAL)
+- Python deployment scripts
+- Pera Wallet integration
+
+## 🔗 Smart Contracts
+- lending_approval.teal
+- crowdfunding.teal
+
+## ⚙️ How to Run
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+# AlgoCampus Finance
+
+Decentralized Campus Finance Platform built on Algorand Blockchain.
+
+## 🚀 Features
+
+### 💰 Lending Protocol
+- Borrow ALGO with fixed interest
+- On-chain debt tracking
+- Smart contract enforced repayment
+- Liquidity pool management
+
+### 🎟 Campus Passes
+- Bronze & Silver NFT-style passes
+- Minting & opt-in functionality
+
+### 📢 Crowdfunding
+- Donate to student campaigns
+- Transparent on-chain transactions
+
+## 🏗 Tech Stack
+- React + Vite
+- TypeScript
+- Algorand Smart Contracts (TEAL)
+- Python deployment scripts
+- Pera Wallet integration
+
+## 🔗 Smart Contracts
+- lending_approval.teal
+- crowdfunding.teal
+
+## ⚙️ How to Run
+
+1. Install dependencies:
+npm install
+
+2. Run frontend:
+npm run dev
+
+3. Deploy contracts using:
+
+
+python scripts/deploy_lending.py
+
+Built for Hackspiration '26
+Powered by Algorand Testnet
