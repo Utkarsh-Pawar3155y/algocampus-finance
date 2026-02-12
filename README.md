@@ -2,6 +2,8 @@
 
 Decentralized Campus Finance Platform built on Algorand Blockchain.
 
+App Link - https://algocampus-finance.vercel.app/
+
 ## 🚀 Features
 
 ### 💰 Lending Protocol
@@ -72,8 +74,6 @@ npm install
 npm run dev
 
 3. Deploy contracts using:
-
-
 python scripts/deploy_lending.py
 
 Built for Hackspiration '26
