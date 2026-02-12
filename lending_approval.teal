@@ -1,0 +1,146 @@
+#pragma version 6
+txn ApplicationID
+int 0
+==
+bnz main_l10
+txn OnCompletion
+int OptIn
+==
+bnz main_l9
+txna ApplicationArgs 0
+byte "deposit"
+==
+bnz main_l8
+txna ApplicationArgs 0
+byte "borrow"
+==
+bnz main_l7
+txna ApplicationArgs 0
+byte "repay"
+==
+bnz main_l6
+err
+main_l6:
+global GroupSize
+int 2
+==
+assert
+gtxn 1 TypeEnum
+int pay
+==
+assert
+gtxn 1 Receiver
+global CurrentApplicationAddress
+==
+assert
+gtxn 1 Amount
+txn Sender
+byte "DEBT"
+app_local_get
+>=
+assert
+byte "POOL"
+byte "POOL"
+app_global_get
+gtxn 1 Amount
++
+app_global_put
+txn Sender
+byte "DEBT"
+int 0
+app_local_put
+txn Sender
+byte "REPAY"
+txn Sender
+byte "REPAY"
+app_local_get
+int 1
++
+app_local_put
+int 1
+return
+main_l7:
+txn Sender
+byte "DEBT"
+app_local_get
+int 0
+==
+assert
+byte "POOL"
+app_global_get
+txna ApplicationArgs 1
+btoi
+>=
+assert
+txn Sender
+byte "DEBT"
+txna ApplicationArgs 1
+btoi
+txna ApplicationArgs 1
+btoi
+byte "RATE"
+app_global_get
+*
+int 100
+/
++
+app_local_put
+itxn_begin
+int pay
+itxn_field TypeEnum
+txn Sender
+itxn_field Receiver
+txna ApplicationArgs 1
+btoi
+itxn_field Amount
+itxn_submit
+byte "POOL"
+byte "POOL"
+app_global_get
+txna ApplicationArgs 1
+btoi
+-
+app_global_put
+int 1
+return
+main_l8:
+global GroupSize
+int 2
+==
+assert
+gtxn 1 TypeEnum
+int pay
+==
+assert
+gtxn 1 Receiver
+global CurrentApplicationAddress
+==
+assert
+byte "POOL"
+byte "POOL"
+app_global_get
+gtxn 1 Amount
++
+app_global_put
+int 1
+return
+main_l9:
+txn Sender
+byte "DEBT"
+int 0
+app_local_put
+txn Sender
+byte "REPAY"
+int 0
+app_local_put
+int 1
+return
+main_l10:
+byte "POOL"
+int 0
+app_global_put
+byte "RATE"
+int 5
+app_global_put
+int 1
+return
